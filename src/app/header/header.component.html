@@ -1,0 +1,20 @@
+<div class="w-100 container-header padding-content py-3 d-flex">
+  <div class="user">
+    <img src="./../../assets/img/enzo_foto.jpeg" alt="">
+    <div class="d-flex  flex-column">
+      <span>
+        Enzo Chacin
+      </span>
+      <span>
+        Software Developer
+      </span>
+    </div>
+  </div>
+  <div class="menu-control">
+    <ng-template let-data ngFor [ngForOf]="menu_buttons">
+      <button (click)="scrollSeletor(data.selector_scroll)">
+        {{data.text}}
+      </button>
+    </ng-template>
+  </div>
+</div>

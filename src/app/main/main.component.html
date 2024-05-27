@@ -1,0 +1,91 @@
+<div class="container-main">
+    <section class="start padding-content text-center">
+      <a class="mb-4 download-cv" download href="./../../assets/CurriculoEnzoChacin.pdf">
+        <object type="image/svg+xml" data="../../assets/icons/download.svg" width="100" height="100"></object>
+        Download CV
+      </a>
+      <h1 class="mt-3">Software Developer</h1>
+      <h2>Chacin Enzo</h2>
+      <p>Angular Developer & Laravel</p>
+
+      <div class="d-flex justify-content-center button-redes">
+        <button (click)="openWindow('https://www.linkedin.com/in/enzo-andres-farias-chacin-87015b22b/')">
+          LINKEDIN
+        </button>
+        <button (click)="openWindow('https://github.com/EnzoAndresFarisCh')">
+          GITHUB
+        </button>
+      </div>
+    </section>
+    <section class="projects">
+      <div class="padding-content py-5">
+        <span class="">PROJETOS</span>
+        <h3 class="mt-3">Meus Projetos Destacados</h3>
+
+        <div class="organizer-buttons d-flex">
+          <button class="selected" (click)="selectedOrganizer($event)" (click)="showAll()">Todos</button>
+          <button  (click)="selectedOrganizer($event)" (click)="showFront()">Frontend</button>
+          <button  (click)="selectedOrganizer($event)" (click)="showBack()">Backend</button>
+          <button  (click)="selectedOrganizer($event)" (click)="showFullStack()">FullStack</button>
+        </div>
+
+        <div class="apresentation-projects">
+          <div class="row card-apresentation frontend" *ngIf="frontEndApresentation">
+            <span>Frontend</span>
+            <div class="col-6 mt-3 text-information">
+              <h2>WIGO</h2>
+              <p>O aplicativo Wigo é uma forma para agendar com um profissional de idiomas nativo.</p>
+              <p>Agendamento de aulas rápido, seguro e flexivel.</p>
+              <button (click)="openWindow('https://github.com/EnzoAndresFarisCh/ProjetoEnzo')" > <object type="image/svg+xml" data="../../assets/icons/github_logo.svg" width="100" height="100"></object> Frontend</button>
+              <div class="used-tecnology d-flex mt-3">
+                <div>VueJs</div>
+                <div>Javascript</div>
+                <div>HTML</div>
+                <div>CSS</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="p-1">
+                <img class="w-100" src="../../assets/img/wigo_captura.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="no-result" *ngIf="(backApresentation && !frontEndApresentation && !fullStackApresentation) || (!backApresentation && !frontEndApresentation && fullStackApresentation)">
+            No momento nao foi desenvolvido nenhum projeto pessoal para o filtro selecionado!
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="its-me">
+      <div class="padding-content py-5">
+        <div class="row">
+          <div class="col-6">
+            <span class="mb-3">SOBRE EU</span>
+            <h3 class="mt-3">Enzo Chacin</h3>
+            <p>Desenvolvedor de Software especializado em aplicativos web Full Stack com Angular, VueJs, HTML, CSS, Javascript, Laravel, PHP e MySQL.</p>
+            <p>Atualmente estou cursando Sistemas de Informação na Universidade Federal de Minas Gerais ( UFMG ).</p>
+            <p>Sou da Venezuela, estou com {{getAnos('2003-12-19')}} anos e resido em Belo Horizonte, Minas Gerais há {{getAnos('2019-07-18')}} anos.</p>
+          </div>
+          <div class="col-6">
+            <div class="card-university">
+              <h2> Sistemas de Informação </h2>
+              <p>Sistemas de Informação da UFMG oferece, como um dos seus diferenciais, a formação multidisciplinar do aluno, a partir da integração curricular das áreas de computação, administração, ciência da informação, economia e estatística.</p>
+              <p class="m-0">- Cursando desde 2022.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills">
+      <div class="padding-content py-5">
+        <span class="mb-3">SKILLS</span>
+        <div class="row mt-3">
+          <ng-template let-data ngFor [ngForOf]="skills">
+            <div class="col-3 skill-card">
+              {{data}}
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </section>
+</div>

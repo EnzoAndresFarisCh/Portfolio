@@ -1,0 +1,21 @@
+div{
+  background-color: #242222;
+
+  .container-footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 25%;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+  }
+  button{
+  background-color: transparent;
+  cursor: pointer;
+
+    object{
+      width: 26px;
+      height: auto;
+    }
+  }
+}
