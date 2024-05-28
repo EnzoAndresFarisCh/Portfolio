@@ -20,7 +20,7 @@ export class HeaderComponent implements OnInit {
       selector_scroll: 'projects'
     },
     {
-      text: 'Sobre eu',
+      text: 'Sobre mim',
       selector_scroll: 'its-me'
     },
     {

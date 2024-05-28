@@ -81,13 +81,17 @@
     }
 
     .organizer-buttons {
+      border-radius: 6px;
+      width: fit-content;
+      justify-content: space-between;
+      background: rgba(112, 112, 112, 0.555);
       button{
         border-radius: 0;
         font-size: 14px;
         padding: .4rem;
         color: #ffffff94;
         transition: color .15s ease-out;
-        background-color: rgba(112, 112, 112, 0.555);
+        background-color: transparent;
         &:nth-child(1){
           border-radius: 8px 0px 0px 8px;
           padding-left: .8rem;
@@ -207,6 +211,10 @@
         font-size: 24px;
       }
     }
+
+    h3{
+      font-size: 22px !important;
+    }
     .skill-card{
       width: 31% !important;
       white-space: nowrap;
@@ -214,6 +222,16 @@
       text-overflow: ellipsis;
       padding-right: 8px !important;
       padding-left: 8px !important;
+    }
+
+    .apresentation-projects{
+      margin-top: 2rem !important;
+    }
+
+    .its-me{
+      p{
+        text-align: justify;
+      }
     }
   }
 }
