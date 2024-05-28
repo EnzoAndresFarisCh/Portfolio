@@ -8,6 +8,10 @@ div{
     align-items: center;
     color: #fff;
     font-size: 14px;
+
+    @media screen and (max-width: 991px) {
+      padding: 20px 10%;
+    }
   }
   button{
   background-color: transparent;

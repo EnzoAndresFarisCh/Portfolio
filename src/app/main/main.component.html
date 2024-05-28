@@ -32,7 +32,7 @@
         <div class="apresentation-projects">
           <div class="row card-apresentation frontend" *ngIf="frontEndApresentation">
             <span>Frontend</span>
-            <div class="col-6 mt-3 text-information">
+            <div class="col-lg-6 col-12 mt-3 text-information">
               <h2>WIGO</h2>
               <p>O aplicativo Wigo é uma forma para agendar com um profissional de idiomas nativo.</p>
               <p>Agendamento de aulas rápido, seguro e flexivel.</p>
@@ -44,7 +44,7 @@
                 <div>CSS</div>
               </div>
             </div>
-            <div class="col-6">
+            <div class="col-lg-6 col-12 mt-lg-0 mt-3">
               <div class="p-1">
                 <img class="w-100" src="assets/img/wigo_captura.png" alt="">
               </div>
@@ -59,14 +59,14 @@
     <section class="its-me">
       <div class="padding-content py-5">
         <div class="row">
-          <div class="col-6">
+          <div class="col-lg-6 col-12">
             <span class="mb-3">SOBRE EU</span>
             <h3 class="mt-3">Enzo Chacin</h3>
             <p>Desenvolvedor de Software especializado em aplicativos web Full Stack com Angular, VueJs, HTML, CSS, Javascript, Laravel, PHP e MySQL.</p>
             <p>Atualmente estou cursando Sistemas de Informação na Universidade Federal de Minas Gerais ( UFMG ).</p>
             <p>Sou da Venezuela, estou com {{getAnos('2003-12-19')}} anos e resido em Belo Horizonte, Minas Gerais há {{getAnos('2019-07-18')}} anos.</p>
           </div>
-          <div class="col-6">
+          <div class="col-lg-6 col-12">
             <div class="card-university">
               <h2> Sistemas de Informação </h2>
               <p>Sistemas de Informação da UFMG oferece, como um dos seus diferenciais, a formação multidisciplinar do aluno, a partir da integração curricular das áreas de computação, administração, ciência da informação, economia e estatística.</p>
@@ -77,7 +77,7 @@
       </div>
     </section>
     <section class="skills">
-      <div class="padding-content py-5">
+      <div class="padding-content py-lg-5 py-2 pb-5">
         <span class="mb-3">SKILLS</span>
         <div class="row mt-3">
           <ng-template let-data ngFor [ngForOf]="skills">

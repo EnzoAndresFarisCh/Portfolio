@@ -111,6 +111,7 @@
       .text-information{
         button{
           padding: 6px;
+          color: #121111;
           background-color: #ffffffb6;
         }
 
@@ -162,7 +163,7 @@
       color: #fff;
       font-size: 24px;
     }
-    div.col-6{
+    div.col-lg-6.col-12{
       align-self: center;
       .card-university{
         background-color: #ffffff5c;
@@ -201,6 +202,18 @@
   }
 
   @media screen and (max-width: 991px) {
-
+    .card-university{
+      h2{
+        font-size: 24px;
+      }
+    }
+    .skill-card{
+      width: 31% !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 8px !important;
+      padding-left: 8px !important;
+    }
   }
 }
