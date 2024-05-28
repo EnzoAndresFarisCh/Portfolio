@@ -55,4 +55,67 @@
       }
     }
   }
+
+  @media screen and (max-width: 991px) {
+    .menu-mobile{
+      position: absolute;
+      width: 80%;
+      background: #b8b8b8;
+      top: 0;
+      overflow: hidden;
+      max-height: 0;
+      transition: all .55s ease-in-out;
+      padding: 0 12%;
+      border-radius: 0 0 6px 6px;
+      &.open{
+        max-height: 100%;
+        padding: 20px 12%;
+      }
+
+      button:not(.cancel){
+        background-color: transparent;
+        text-align: start;
+        width: 80% !important;
+        margin-bottom: 12px;
+        color: #121111;
+      }
+
+      button.cancel{
+        svg{
+          width: 24px;
+          height: auto;
+        }
+        background-color: transparent;
+        position: absolute;
+        right: 20px;
+        top: 26px;
+      }
+    }
+    .menu-control-mobile{
+      align-self: center;
+      .icon{
+        width: 60px;
+        height: 60px;
+        ::ng-deep svg path{
+          transition: all .15s ease-in
+        }
+        &.open{
+          ::ng-deep svg path{
+            transition: all .15s ease-out;
+            stroke: rgb(151, 151, 151) !important;
+
+            &.path_one{
+              transform: rotate(45deg) translateX(5px) translateY(-8px);
+            }
+            &.path_treeh{
+              stroke: transparent !important;
+            }
+            &.path_two{
+              transform: rotate(-45deg) translate(-12.9px, 4.5px);
+            }
+          }
+        }
+      }
+    }
+  }
 }

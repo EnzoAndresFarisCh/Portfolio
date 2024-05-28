@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
+  itsMobile: boolean = window.innerWidth < 992;
+  openMenuMobile: boolean = false
+  v: boolean = false
   constructor() { }
   menu_buttons: any[] = [
     {
@@ -32,5 +34,21 @@ export class HeaderComponent implements OnInit {
 
   scrollSeletor(s: string){
     document.querySelector(`section.${s}`)?.scrollIntoView()
+  }
+
+  eventListenerBody(){
+    this.openMenuMobile = !this.openMenuMobile
+    const close = () => {
+      if(this.openMenuMobile && this.v){
+        this.openMenuMobile = false
+        this.v = false
+        document.body.removeEventListener('click', close)
+      }
+      else if(!this.v) {
+        this.v = true
+      }
+    }
+
+    document.body.addEventListener('click', close)
   }
 }
