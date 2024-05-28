@@ -30,9 +30,9 @@
         </div>
 
         <div class="apresentation-projects">
-          <div class="row card-apresentation frontend" *ngIf="frontEndApresentation">
-            <span>Frontend</span>
-            <div class="col-lg-6 col-12 mt-3 text-information">
+          <div class="row card-apresentation frontend pb-5" *ngIf="frontEndApresentation">
+            <span class="mb-4">Frontend</span>
+            <div class="col-lg-6 col-12 text-information">
               <h2>WIGO</h2>
               <p>O aplicativo Wigo é uma forma para agendar com um profissional de idiomas nativo.</p>
               <p>Agendamento de aulas rápido, seguro e flexivel.</p>
@@ -47,6 +47,25 @@
             <div class="col-lg-6 col-12 mt-lg-0 mt-3">
               <div class="p-1">
                 <img class="w-100" src="assets/img/wigo_captura.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="row card-apresentation frontend flex-row-reverse mt-5" *ngIf="frontEndApresentation">
+            <span class="mb-4">Frontend</span>
+            <div class="col-lg-6 col-12 text-information">
+              <h2>PORTFOLIO</h2>
+              <p>Representação geral do que eu sou capaz e do que posso oferecer como desenvolvedor web.</p>
+              <button (click)="openWindow('https://github.com/EnzoAndresFarisCh/ProjetoEnzo')" > <object type="image/svg+xml" data="assets/icons/github_logo.svg" width="100" height="100"></object> Frontend</button>
+              <div class="used-tecnology d-flex mt-3">
+                <div>Angular</div>
+                <div>Typescript</div>
+                <div>HTML</div>
+                <div>SCSS</div>
+              </div>
+            </div>
+            <div class="col-lg-6 col-12 mt-lg-0 mt-3">
+              <div class="p-1">
+                <img class="w-100" src="assets/img/portfolioimagem.png" alt="">
               </div>
             </div>
           </div>
