@@ -58,7 +58,7 @@
   }
   object{
     width: 16px;
-    height: fit-content;
+    height: auto;
     margin-bottom: -2px;
   }
 
@@ -201,6 +201,6 @@
   }
 
   @media screen and (max-width: 991px) {
-     
+
   }
 }
