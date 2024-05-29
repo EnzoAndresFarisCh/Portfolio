@@ -6,7 +6,7 @@
       </a>
       <h1 class="mt-3">Software Developer</h1>
       <h2>Chacin Enzo</h2>
-      <p>Angular Developer & Laravel</p>
+      <p>Desenvolvedor Angular & Laravel</p>
 
       <div class="d-flex justify-content-center button-redes">
         <button (click)="openWindow('https://www.linkedin.com/in/enzo-andres-farias-chacin-87015b22b/')">
@@ -15,6 +15,29 @@
         <button (click)="openWindow('https://github.com/EnzoAndresFarisCh')">
           GITHUB
         </button>
+      </div>
+    </section>
+    <section class="experience">
+      <div class="padding-content py-5">
+        <span class="">Experiência</span>
+        <h3 class="mt-3 mb-5">Expertise Profissional</h3>
+
+        <div class="ms-2 d-flex mt-2 flex-column">
+          <ng-template let-data let-first="first" ngFor [ngForOf]="experiences">
+            <div class="d-flex mb-4">
+              <div class="line position-relative">
+                <span [ngClass]="{'actual': first}"></span>
+              </div>
+              <div class="ms-4">
+                <h2 class="mb-0">{{data.title}}</h2>
+                <span class="empresa mb-4"><span>{{data.empresa}}</span> {{data.years}}</span>
+                <p class="mb-2 mt-3">
+                 {{data.content}}
+                </p>
+              </div>
+            </div>
+          </ng-template>
+        </div>
       </div>
     </section>
     <section class="projects">
@@ -83,13 +106,26 @@
             <h3 class="mt-3">Enzo Chacin</h3>
             <p>Desenvolvedor de Software especializado em aplicativos web Full Stack com Angular, VueJs, HTML, CSS, Javascript, Laravel, PHP e MySQL.</p>
             <p>Atualmente estou cursando Sistemas de Informação na Universidade Federal de Minas Gerais ( UFMG ).</p>
-            <p>Sou da Venezuela, estou com {{getAnos('2003-12-19')}} anos e resido em Belo Horizonte, Minas Gerais há {{getAnos('2019-07-18')}} anos.</p>
+            <p>Estou com {{getAnos('2003-12-19')}} anos e resido em Belo Horizonte, Minas Gerais há {{getAnos('2019-07-18')}} anos.</p>
           </div>
           <div class="col-lg-6 col-12">
             <div class="card-university">
               <h2> Sistemas de Informação </h2>
               <p>Sistemas de Informação da UFMG oferece, como um dos seus diferenciais, a formação multidisciplinar do aluno, a partir da integração curricular das áreas de computação, administração, ciência da informação, economia e estatística.</p>
               <p class="m-0">- Cursando desde 2022.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-3 flex-row-reverse">
+          <div class="col-lg-6 col-12 align-self-start">
+            <p>Antes de estudar na UFMG fazia o curso de Analises e Desenvolvimento de Sistemas na faculdade COTEMIG.</p>
+            <p>Fiz um semestre, pode parecer pouco tempo mas querendo ou não a experiência e vivências entre faculdades diferentes faz eu expandir minha mente.</p>
+          </div>
+          <div class="col-lg-6 col-12">
+            <div class="card-university">
+              <h2> COTEMIG </h2>
+              <p>O curso superior de Tecnologia em Análise e Desenvolvimento de Sistemas da Faculdade COTEMIG é direcionado à área da Tecnologia da Informação e destinado a quem quer ingressar rapidamente no mercado de trabalho.</p>
+              <p class="m-0">- Cursado de 2021 a 2022.</p>
             </div>
           </div>
         </div>
@@ -100,8 +136,10 @@
         <span class="mb-3">SKILLS</span>
         <div class="row mt-3">
           <ng-template let-data ngFor [ngForOf]="skills">
-            <div class="col-3 skill-card">
-              {{data}}
+            <div class="col-3 mb-2">
+              <div class="skill-card">
+                {{data}}
+              </div>
             </div>
           </ng-template>
         </div>

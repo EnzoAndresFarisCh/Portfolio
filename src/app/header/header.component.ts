@@ -16,6 +16,10 @@ export class HeaderComponent implements OnInit {
       selector_scroll: 'start'
     },
     {
+      text: 'Experiência',
+      selector_scroll: 'experience'
+    },
+    {
       text: 'Projetos',
       selector_scroll: 'projects'
     },
